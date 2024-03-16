@@ -4,7 +4,7 @@ import numpy as np
 from .data_processor import log_txf, remap_emp_length
 
 def get_prediction(**kwargs):
-    clf = load('mdl.joblib')
+    clf = load('/mount/src/dssi.py/dssi-py-main/src/mdl.joblib')
     features = load('raw_features.joblib')
     pred_df = pd.DataFrame(kwargs, index=[0])
     pred_df = log_txf(pred_df, ['annual_inc'])
